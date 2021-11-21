@@ -28,3 +28,26 @@ const similarity = (str1, str2) => {
   return 1 - distance / maxLength;
 };
 
+// eslint-disable-next-line
+const spamProbability = (texts) => { 
+  // assigns a spam probability to each text
+
+  const probabilities = [];
+  for (let i = 0; i < texts.length; i += 1) {
+    const dissimilarity = []; // array of dissimilarity between the current text and the rest
+
+    for (let j = 0; j < texts.length; j += 1) {
+      if (j !== i) { // skip self
+        // push dissimilarity between current text and the other text
+        dissimilarity.push(similarity(texts[i], texts[j]));
+      }
+    }
+
+    const sumOfDissimilarity = dissimilarity.reduce((acc, next) => acc + next);
+    const averageDissimilarity = sumOfDissimilarity / dissimilarity.length;
+
+    probabilities.push(averageDissimilarity);
+  }
+
+  return probabilities;
+};
