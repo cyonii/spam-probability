@@ -51,10 +51,3 @@ const spamProbabilities = (texts) => {
 
   return probabilities;
 };
-
-const email1 = 'This is first spam email';
-const email2 = 'This is second spam email';
-const email3 = 'This is third spam email';
-const email4 = 'This is first spam email';
-
-console.log(spamProbabilities([email1, email2, email3, email4])); // eslint-disable-line no-console
