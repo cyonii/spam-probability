@@ -19,3 +19,12 @@ const levenshteinDistance = (str1, str2) => {
   }
   return track[str2.length][str1.length];
 };
+
+const similarity = (str1, str2) => {
+  // returns the similarity between two strings
+
+  const distance = levenshteinDistance(str1, str2);
+  const maxLength = Math.max(str1.length, str2.length);
+  return 1 - distance / maxLength;
+};
+
