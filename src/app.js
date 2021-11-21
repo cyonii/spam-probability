@@ -29,7 +29,7 @@ const similarity = (str1, str2) => {
 };
 
 // eslint-disable-next-line
-const spamProbability = (texts) => { 
+const spamProbabilities = (texts) => { 
   // assigns a spam probability to each text
 
   const probabilities = [];
@@ -46,8 +46,15 @@ const spamProbability = (texts) => {
     const sumOfDissimilarity = dissimilarity.reduce((acc, next) => acc + next);
     const averageDissimilarity = sumOfDissimilarity / dissimilarity.length;
 
-    probabilities.push(averageDissimilarity);
+    probabilities.push(Math.floor(averageDissimilarity * 100));
   }
 
   return probabilities;
 };
+
+const email1 = 'This is first spam email';
+const email2 = 'This is second spam email';
+const email3 = 'This is third spam email';
+const email4 = 'This is first spam email';
+
+console.log(spamProbabilities([email1, email2, email3, email4])); // eslint-disable-line no-console
