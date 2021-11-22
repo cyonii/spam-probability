@@ -30,7 +30,7 @@ const similarity = (str1, str2) => {
 
 // eslint-disable-next-line
 const spamProbabilities = (texts) => { 
-  // assigns a spam probability to each text
+  // returns an array of spam probabilities for each text in texts
 
   const probabilities = [];
   for (let i = 0; i < texts.length; i += 1) {
