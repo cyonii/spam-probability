@@ -34,17 +34,17 @@ const spamProbabilities = (texts = []) => {
 
   const probabilities = [];
   for (let i = 0; i < texts.length; i += 1) {
-    const dissimilarity = []; // array of dissimilarity between the current text and the rest
+    const dissimilarities = []; // array of dissimilarity between the current text and the rest
 
     for (let j = 0; j < texts.length; j += 1) {
       if (j !== i) { // skip self
         // push dissimilarity between current text and the other text
-        dissimilarity.push(similarity(texts[i], texts[j]));
+        dissimilarities.push(similarity(texts[i], texts[j]));
       }
     }
 
-    const sumOfDissimilarity = dissimilarity.reduce((acc, next) => acc + next);
-    const averageDissimilarity = sumOfDissimilarity / dissimilarity.length;
+    const sumOfDissimilarity = dissimilarities.reduce((acc, next) => acc + next);
+    const averageDissimilarity = sumOfDissimilarity / dissimilarities.length;
 
     probabilities.push(averageDissimilarity);
   }
