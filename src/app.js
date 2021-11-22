@@ -46,7 +46,7 @@ const spamProbabilities = (texts) => {
     const sumOfDissimilarity = dissimilarity.reduce((acc, next) => acc + next);
     const averageDissimilarity = sumOfDissimilarity / dissimilarity.length;
 
-    probabilities.push(Math.floor(averageDissimilarity * 100));
+    probabilities.push(averageDissimilarity);
   }
 
   return probabilities;
