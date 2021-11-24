@@ -20,12 +20,18 @@ const levenshteinDistance = (str1, str2) => {
   return track[str2.length][str1.length];
 };
 
-const similarity = (str1, str2) => {
+const similarity = (str1, str2, options = { caseSensitive: false }) => {
   // returns the similarity between two strings
+  // options.caseSensitive: boolean, whether or not to ignore case
+
+  if (!options.caseSensitive) {
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+  }
 
   const distance = levenshteinDistance(str1, str2);
   const maxLength = Math.max(str1.length, str2.length);
-  return 1 - distance / maxLength;
+  return 1 - (distance / maxLength);
 };
 
 module.exports = { levenshteinDistance, similarity };
