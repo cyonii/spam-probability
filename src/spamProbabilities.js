@@ -1,4 +1,4 @@
-const { similarity } = require('./utils');
+const diceCoefficient = require('./diceCoefficient');
 
 const spamProbabilities = (texts = []) => {
   // returns an array of spam probabilities for each text in texts
@@ -10,7 +10,7 @@ const spamProbabilities = (texts = []) => {
     for (let j = 0; j < texts.length; j += 1) {
       if (j !== i) { // skip self
         // push dissimilarity between current text and the other text
-        dissimilarities.push(similarity(texts[i], texts[j]));
+        dissimilarities.push(diceCoefficient(texts[i], texts[j]));
       }
     }
 
