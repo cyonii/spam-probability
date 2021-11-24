@@ -14,7 +14,7 @@ It uses the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_dis
 1 - (distance / max(len(s1), len(s2)))
 ```
 
-It loops through the given set of messages and compare the current text to the rest in the set. It then makes an array of the comparisons between each text and the rest, computes the average of the comparison, which is the probability of the current text being spam.
+It loops through the given set of messages and compare the similarity of current text to the rest in the set. It then makes an array of the similarities between the current text and the rest, computes the average of the similarities, which is the probability of the current text being spam.
 
 The function returns an array of the probabilities of each text in the set.
 
@@ -24,4 +24,22 @@ The function returns an array of the probabilities of each text in the set.
 - Function: `spamProbability`
   - Parameters:
     - `messages`: An array of strings.
-  - Returns: An array of numbers.
+  - Returns: An array of numbers ranging from 0 to 1 representing the spam probabilities of each text in the set.
+
+## Prerequisite
+
+Make sure to have [Node.js](http://nodejs.org) installed on your machine.
+
+- Clone the repository
+- Run `npm install` to install dependencies.
+
+## Example Cases
+
+To run the example included in this repository:
+
+- Run `node src/app.js`, the result should be outputed to your console.
+
+## Test
+
+The project has been tested using [Jest](https://github.com/facebook/jest)
+To run the test suits, simpley run `npm test`
