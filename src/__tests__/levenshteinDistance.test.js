@@ -1,4 +1,4 @@
-const { levenshteinDistance, similarity } = require('../utils');
+const levenshteinDistance = require('../levenshteinDistance');
 
 describe('levenshteinDistance', () => {
   it('should return 0 for same strings', () => {
@@ -15,19 +15,5 @@ describe('levenshteinDistance', () => {
 
   it('should return the length of the longer string when the shorter string is empty', () => {
     expect(levenshteinDistance('', 'apple')).toBe(5);
-  });
-});
-
-describe('similarity', () => {
-  it('should return 1 for same strings', () => {
-    expect(similarity('test', 'test')).toBe(1);
-  });
-
-  it('should return less than 1 when both strings have one letter difference', () => {
-    expect(similarity('apple', 'apples')).toBeLessThan(1);
-  });
-
-  it('should return 0 when strings have no common letters', () => {
-    expect(similarity('hunger', 'loyalty')).toBe(0);
   });
 });
