@@ -6,7 +6,7 @@ The probability is ranged from 0 to 1, where 0 is no spam and 1 is spam.
 
 ## Approach
 
-It uses the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) algorithm (also known as the edit distance) to calculate the distance between two strings and compute their similarity by dividing the distance by the length of the longer string, and then taking the inverse, which is the probability of the two strings being identical.
+It uses the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) algorithm (also known as the edit distance) to calculate the distance between two strings and compute their similarity by dividing the distance by the length of the longer string, and subtracting the result from 1.
 
 > Formular to calculate string similarity based on Levenshtein Distance:
 
