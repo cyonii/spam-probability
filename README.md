@@ -14,7 +14,7 @@ It uses the [Dice Coefficient](https://en.wikipedia.org/wiki/Dice%27s_coefficien
 2 * size(intersection(str1, str2)) / (size(str1) + size(str2))
 ```
 
-It loops through the given set of messages and compare the similarity of current text to the rest in the set. It then makes an array of the similarities between the current text and the rest, computes the average of the similarities, which is the probability of the current text being spam.
+It loops through the given set of messages and compare the similarity of the current text to the rest in the set. It then makes an array of the similarities between the current text and the rest, computes the average of the similarities, which is the probability of the current text being spam.
 
 The function returns an array of spam probabilities of each text in the set.
 
