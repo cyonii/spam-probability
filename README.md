@@ -23,7 +23,7 @@ The function returns an array of the probabilities of each text in the set.
 - File path: `src/spamProbability.js`
 - Function: `spamProbability`
   - Parameters:
-    - `messages`: An array of strings.
+    - `texts`: An array of strings.
   - Returns: An array of numbers ranging from 0 to 1 representing the spam probabilities of each text in the set.
 
 ## Prerequisite
