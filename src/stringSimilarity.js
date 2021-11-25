@@ -2,7 +2,6 @@ const levenshteinDistance = require('./levenshteinDistance');
 
 const stringSimilarity = (str1, str2, options = { caseSensitive: false }) => {
   // returns the similarity between two strings
-  // options.caseSensitive: boolean, whether or not to ignore case
 
   if (!options.caseSensitive) {
     str1 = str1.toLowerCase();
