@@ -11,7 +11,7 @@ It uses the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_dis
 > Formular to calculate string similarity based on Levenshtein Distance:
 
 ```math
-1 - (distance / max(len(s1), len(s2)))
+1 - (distance(s1, s2) / max(len(s1), len(s2)))
 ```
 
 It loops through the given set of messages and compare the similarity of the current text to the rest in the set. It then makes an array of the similarities between the current text and the rest, computes the average of the similarities, which is the probability of the current text being spam.
