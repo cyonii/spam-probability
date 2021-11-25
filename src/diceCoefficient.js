@@ -16,6 +16,10 @@ function intersect(set1, set2) {
 function diceCoefficient(str1, str2) {
   // returns the dice coefficient of two strings
 
+  if (str1.length === 0 || str2.length === 0) return 0;
+  if (str1.length === 1 || str2.length === 1) return 0;
+  if (str1 === str2) return 1;
+
   const bigrams1 = getBigrams(str1);
   const bigrams2 = getBigrams(str2);
   return (2 * intersect(bigrams1, bigrams2).size) / (bigrams1.size + bigrams2.size);
