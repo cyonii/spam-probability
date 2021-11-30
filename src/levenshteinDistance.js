@@ -1,6 +1,10 @@
+/**
+ * Calculates the Levenshtein distance between two strings.
+ * @param {string} str1 - The first string to compare
+ * @param {string} str2 - The second string to compare
+ * @returns {number} - The Levenshtein distance between the two strings
+ */
 const levenshteinDistance = (str1, str2) => {
-  // returns the levenshtein distance between two strings
-
   const track = Array(str2.length + 1)
     .fill(null)
     .map(() => Array(str1.length + 1).fill(null));
