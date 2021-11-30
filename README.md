@@ -11,7 +11,7 @@ It uses the [Dice Coefficient](https://en.wikipedia.org/wiki/Dice%27s_coefficien
 > Formular to calculate similarity based on Dice Coefficient:
 
 ```math
-2 * size(intersection(str1, str2)) / (size(str1) + size(str2))
+2 * size(intersection(bigrams(s1), bigrams(s2))) / (size(bigrams(s1)) + size(bigrams(s2)))
 ```
 
 It loops through the given set of messages and compare the similarity of the current text to the rest in the set. It then makes an array of the similarities between the current text and the rest, computes the average of the similarities, which is the probability of the current text being spam.
