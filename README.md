@@ -49,4 +49,4 @@ To run the test suits, simpley run `npm test`
 The project has been documented from doc comments using [JSDoc](https://jsdoc.app). To see the generated documentation, navigate to `docs/` directory and open `index.html` in your browser.
 
 To generate the documentation after making changes, run:
-`npm run docs`
+`npm run doc`
