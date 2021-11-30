@@ -13,8 +13,8 @@ function getBigrams(str) {
 
 /**
  * Calculates the intersection of two sets
- * @param {Set<string>} set1 - first set
- * @param {Set<string>} set2 - second set
+ * @param {Set<string>} set1 - first set to be compared
+ * @param {Set<string>} set2 - second set to be compared
  * @returns {Set<string>} - intersection of two sets
  */
 function intersection(set1, set2) {
@@ -23,8 +23,8 @@ function intersection(set1, set2) {
 
 /**
  * Calculates the dice coefficient of two strings
- * @param {string} str1 - first string
- * @param {string} str2 - second string
+ * @param {string} str1 - first string to be compared
+ * @param {string} str2 - second string to be compared
  * @returns {number} - dice coefficient of two strings
  */
 function diceCoefficient(str1, str2) {
