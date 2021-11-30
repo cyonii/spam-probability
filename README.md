@@ -43,3 +43,10 @@ To run the example included in this repository:
 
 The project has been tested using [Jest](https://github.com/facebook/jest)
 To run the test suits, simpley run `npm test`
+
+## Documentation
+
+The project has been documented using [JSDoc](https://jsdoc.app) from doc comments. To see the generated documentation, navigate to `docs/` directory and open `index.html` in your browser.
+
+To generate the documentation after making changes, run:
+`npm run docs`
