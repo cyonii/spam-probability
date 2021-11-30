@@ -1,8 +1,11 @@
 const diceCoefficient = require('./diceCoefficient');
 
+/**
+ * Calculates the spam probabilities for a given array of texts.
+ * @param {Array<string>} texts - Array of text messages
+ * @returns {Array<number>} - Array of numbers indicating the spam probability for each text
+ */
 const spamProbabilities = (texts = []) => {
-  // returns an array of spam probabilities for each text in texts
-
   const probabilities = [];
   for (let i = 0; i < texts.length; i += 1) {
     const dissimilarities = []; // array of dissimilarity between the current text and the rest
