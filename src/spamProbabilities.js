@@ -8,19 +8,19 @@ const diceCoefficient = require('./diceCoefficient');
 const spamProbabilities = (texts = []) => {
   const probabilities = [];
   for (let i = 0; i < texts.length; i += 1) {
-    const dissimilarities = []; // array of dissimilarity between the current text and the rest
+    const similarities = []; // similarities between the current text and the rest
 
     for (let j = 0; j < texts.length; j += 1) {
       if (j !== i) { // skip self
-        // push dissimilarity between current text and the other text
-        dissimilarities.push(diceCoefficient(texts[i], texts[j]));
+        // push similarity between current text and the other text
+        similarities.push(diceCoefficient(texts[i], texts[j]));
       }
     }
 
-    const sumOfDissimilarity = dissimilarities.reduce((acc, next) => acc + next);
-    const averageDissimilarity = sumOfDissimilarity / dissimilarities.length;
+    const sumOfSimilarities = similarities.reduce((acc, next) => acc + next);
+    const averageSimilarity = sumOfSimilarities / similarities.length;
 
-    probabilities.push(averageDissimilarity);
+    probabilities.push(averageSimilarity);
   }
 
   return probabilities;
